@@ -1,4 +1,5 @@
 # Binary Classification of Medical Images using ResNet-18
+![test prediction](test_predictions.png)
 This project uses ResNet-18 to classify ultrasound images according to the presence of a specific feature.
 
 ## Binary Classification
