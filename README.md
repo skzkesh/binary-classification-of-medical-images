@@ -5,10 +5,10 @@
 This project uses ResNet-18 to classify ultrasound images according to the presence of a specific feature.
 
 ## Binary Classification
-Binary Classification is defined as the process of analyzing data and making decision to categorized two elements. Binary classification model is used when we want to classify an item to one of two categories. This project focuses on applying binary classification to classifiy medical images into two categories, such as "organ absent" and "organ present". We successfully trained and implemented this binary classification model to detect the present of thyroid and trachea in a sequence of ultrasound images with high precision.
+Binary classification refers to the process of analyzing data to categorize items into one of two distinct classes. A binary classification model is employed when the goal is to classify an item into one of two categories. This project focuses on applying binary classification to medical images, specifically classifying them as either "organ absent" or "organ present." We successfully trained and implemented this binary classification model to detect the presence of the thyroid and trachea in a series of ultrasound images with high precision.
 
 ## ResNet-18
-ResNet-18 is used as pre-trained model in this project. The reason is due to the limited dataset that we have. The current data that we have was collected independently, causing it to have less variant. ResNet-18 works better with small dataset and even better, it requires lighter computational power compared to ResNet-50-101, making it faster and more efficient. A less complex model like ResNet-18 reduced te risk overfitting, while still able to capture unique medical pattern. Transfer learning enable pre-trained model to be implemented to different type of images, including medical images such as ultrasound images.
+In this project, we use ResNet-18 as the pre-trained model. This choice is due to the limited size of our dataset, which was collected independently and has less variance. ResNet-18 performs well with smaller datasets and requires less computational power compared to models like ResNet-50 or ResNet-101, making it faster and more efficient. A simpler model like ResNet-18 reduces the risk of overfitting while still capturing unique medical patterns. Transfer learning allows us to apply pre-trained models to different types of images, including medical images such as ultrasound scans.
 
 ## Pre-requisite
 - Windows/Linux/MacOS
@@ -16,18 +16,20 @@ ResNet-18 is used as pre-trained model in this project. The reason is due to the
 - CPU or GPU
 
 ## Organize folder directory 
-In PyTorch, the most common way of doing image classification is to structure your dataset into folders by class. `torchvision.datasets.ImageFolder` will take folder name as class and it automatically assigns labels to each item in the folder according to the class, removing the need for manual labelling. Firstly, we create two folders named "train" and "validation" in out working directory. Train subfolder is used to store images for training while validation folder store validation images. The most common general-purpose split is 80 / 20. After creating both folders, create two subfolders in each folder, each named "x present" and "x absent" where x can be substitute with the organ that you are trying to classify. Load your data according to the label (folder name)
+In PyTorch, the most common way of doing image classification is to structure your dataset into folders by class. The `torchvision.datasets.ImageFolder` utility takes folder names as class labels and automatically assigns labels to each item, eliminating the need for manual labeling.
+
+First, create two main folders named "train" and "validation" in your working directory. The "train" subfolder will store images used for training, while the "validation" folder will hold validation images. The typical split is 80/20. Within each of these folders, create two subfolders named "x_present" and "x_absent," where "x" is replaced by the organ you are trying to classify. Load your data according to these labels (folder names).
 
 ## Setup
-Before running the code, ensure you have download all of the libraries required to run the model. Use the command below to install the necessary libraries:
+Before running the code, ensure you have downloaded all the required libraries. Use the following commands to install the necessary packages:
 - `pip install torch`
 - `pip install torchvision`
 - `pip install scikit-learn`
 
-## Run the code
-Once all the libraries are installed, run your code by through the terminal or through the running button. Once your code is succesfully run, the details of the current epoch, number of loss, and validation accuracy will appear. If the current running model perform better than the previous model, it will be save in a .pth format. Later, we use this file to load the weight for testing and real application purposes.
+## Running the code
+Once all libraries are installed, execute your code via the terminal or using the run button in your IDE. After successful execution, details about the current epoch, loss, and validation accuracy will be displayed. If the current model performs better than the previous one, it will be saved in a `.pth` format. This file can later be used to load weights for testing and real-world applications.
 
 ## Optimization
-Your model performance can still be improved over time through hyperparameter tuning. Hyperparameter tuning can be done through multiple approaches including GridSearchCV, RandomizedSearchCV, and Bayesian Optimization. It is also important to note that we are aiming to collect higher amount of data to make our model as general and as accurate as possible.
+Your model's performance can be improved over time through hyperparameter tuning. This can be accomplished using various methods, including GridSearchCV, RandomizedSearchCV, and Bayesian Optimization. Additionally, we aim to collect a larger dataset to enhance the model's generalization and accuracy.
 
 
