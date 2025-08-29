@@ -33,6 +33,6 @@ Once all libraries are installed, execute your code via the terminal or using th
 Your model's performance can be improved over time through hyperparameter tuning. This can be accomplished using various methods, including GridSearchCV, RandomizedSearchCV, and Bayesian Optimization. Additionally, we aim to collect a larger dataset to enhance the model's generalization and accuracy.
 
 ## Notes
-I added .pth file of the trachea and thyroid model that has been trained in this repository.
+This is the google drive of .pth file for thyroid and trachea classification. [link](https://drive.google.com/drive/folders/1_X0oAMHWVAe2Icy68qbbT1MGAnDhgtVT?usp=sharing)
 
 
